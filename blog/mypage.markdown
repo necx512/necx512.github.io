@@ -2,7 +2,7 @@
 layout: default
 title: "PAGE-TITLE"
 description: "my desc"
-permalink: /hello
+permalink: /hell
 ---
 
 # Test
