@@ -2,6 +2,7 @@
 layout: default
 title: i3
 description: Débuter sur i3.
+permalink: /i3
 ---
 
 
