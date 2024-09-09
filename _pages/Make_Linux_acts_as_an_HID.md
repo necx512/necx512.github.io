@@ -99,11 +99,11 @@ Bluetooth specification describes SDP.
 
 # USB
 <table>
-<th>
-<td>Main</td>
-<td>Global</td>
-<td>Local</td>
-</th>
+<tr>
+<th>Main</th>
+<th>Global</th>
+<th>Local</th>
+</tr>
 
 <tr>
 <td>Input</td>
