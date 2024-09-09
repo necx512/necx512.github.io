@@ -1,3 +1,10 @@
+---
+layout: default
+title: Make Linux acts as an HID 
+description: Débuter sur i3.
+---
+
+
 Some days ago, I opened my laptop and due to a kind of Murphy's law, the keyboard did not work.
 
 Obviously, I put an external USB keyboard but because I love to learn and doing useless things, I wondered if it is possible to use my rasperry pi(or any other computer based on Linux) as a bluetooth keyboard.
