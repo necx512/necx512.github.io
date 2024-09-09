@@ -38,13 +38,16 @@ The reason I wanted to show you this error is because of its format. You can see
 On linux, processes can communicates through multiple ways such as sockets, shared memory, named pipe or… DBUS!
 
 You can simply see DBUS as a virtual bus on which multiple processes connect to in order to send or receive messages each other
+
 ![DBUS](/assets/images/2024-09-09_23-10_dbus.png)
 
 Each process are identified by a so called 'Well-known bus name'. From the previous error, `org.bluez` is the well-known bus name for the bluetooth service:
+
 ![busctl](/assets/images/2024-09-09_23-12_busctl.png)
 
 ## Objects and Interfaces
 `org.bluez` refers to the bluetooth service on DBUS. The service expose multiple objects which are named with a linux-like path. For example, the well-known bus 'org.bluez' has an object called '/org/bluez'
+
 ![busctl](/assets/images/2024-09-09_23-13_qdbus.png)
 Each object has multiple interfaces. Some exemples of interfaces provided bt the object '/org/bluez':
 - org.bluez.Agent
@@ -63,6 +66,7 @@ https://www.bluetooth.com/specifications/specs/
 There is not one document in this page but many. The first time I saw that, I was lost. So let me explain some basics.
 ### Status
 First, there is an important column name called 'status' and 'Version/Revision'
+
 ![spec bluetooth](/assets/images/2024-09-09_23-16_status.png)
 
 If you look carefully, there are documents with the same name. Some of those document are old, so it is important to look for the most recent one.
@@ -71,9 +75,11 @@ Moreover, some of those documents have a deprecated status. This is important to
 
 ## Important documents
 There is two important documents. The first one is the core bluetooth specification. This will gives you some important generic informations
+
 ![spec bluetoothcore](/assets/images/2024-09-09_23-18_core.png)
 
 Among all other document, there is one that seems to be interresting for us: The Human Interface Device Profile.
+
 ![spec bluetoothhid](/assets/images/2024-09-09_23-19_hid.png)
 
 
