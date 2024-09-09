@@ -98,6 +98,13 @@ Bluetooth specification describes SDP.
 > A service record contains attributes that are specific to a service class as well as universal attributes that are common to all services
 
 # USB
+<table>
+<th>
+<td>Main</td>
+<td>Global</td>
+<td>Local</td>
+</th>
+<table>
 | Main | Global | Local |
 | ---- | ------ | ----- |
 | Input | Usage Page | Usage
