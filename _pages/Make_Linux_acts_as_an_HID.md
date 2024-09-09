@@ -22,4 +22,81 @@ HID are one of the classes of devices in the blootooth specification.
 Bluez is the bluetooth stack for linux[1].
 I did not want to implement a full bluetooth stack ( not yet ;) ). Using it's existing stack allows me to abtract the low level things of the protocol.
 If you used to use Linux, you probably know the bluetooth service:
-![](/assets/images/2024-09-09_22-52_bluetoothservice.png)
+![bluetooth service](/assets/images/2024-09-09_22-52_bluetoothservice.png)
+
+Once active, you can interract with it with the `bluetoothctl` command. For example, we can discover available devices with the scan on command. The following screen show my device.
+![bluetoothctl](/assets/images/2024-09-09_23-06_bluetoothctl.png)
+
+Let's try to connect to this device with the command connect [MAC]:
+![Failed to connect](/assets/images/2024-09-09_23-08_bluetoothctl_failed.png)
+
+As you can see, the connect command failed. This is the expected behaviour because you need to pair with the device (with the pair command) before try to connect to it.
+
+The reason I wanted to show you this error is because of its format. You can see the stringorg.bluez.Error.Failed . If you don't know: such string is specific to DBUS, meaning that bluetoothctl use DBUS. But, wait… What is DBUS?
+
+# DBUS
+On linux, processes can communicates through multiple ways such as sockets, shared memory, named pipe or… DBUS!
+
+You can simply see DBUS as a virtual bus on which multiple processes connect to in order to send or receive messages each other
+![DBUS](/assets/images/2024-09-09_23-10_dbus.png)
+
+Each process are identified by a so called 'Well-known bus name'. From the previous error, `org.bluez` is the well-known bus name for the bluetooth service:
+![busctl](/assets/images/2024-09-09_23-12_busctl.png)
+
+## Objects and Interfaces
+`org.bluez` refers to the bluetooth service on DBUS. The service expose multiple objects which are named with a linux-like path. For example, the well-known bus 'org.bluez' has an object called '/org/bluez'
+![busctl](/assets/images/2024-09-09_23-13_qdbus.png)
+Each object has multiple interfaces. Some exemples of interfaces provided bt the object '/org/bluez':
+- org.bluez.Agent
+- org.bluez.Adapter
+- org.bluez.ProfileManager1 (https://github.com/bluez/bluez/blob/master/doc/org.bluez.ProfileManager.rst)
+
+Finally, earch interface provide some function you can call. In our case, we will use the functions exported by the interfaces of the /org/bluez object to interact with the bluetooth service.
+
+# Specifications documents
+Before going further, let me give you important documents
+## Bluetooth
+Knowing we need to use dbus to communicate with bluez is not enough. Indeed, there is no magical functions createMyKeyboardDevice.
+Thus, we need to learn a little bit more about how to create an bluetooth HID device. The better place to do that is the official website that provides the bluetooth specifications:
+https://www.bluetooth.com/specifications/specs/
+
+There is not one document in this page but many. The first time I saw that, I was lost. So let me explain some basics.
+### Status
+First, there is an important column name called 'status' and 'Version/Revision'
+![spec bluetooth](/assets/images/2024-09-09_23-16_status.png)
+
+If you look carefully, there are documents with the same name. Some of those document are old, so it is important to look for the most recent one.
+
+Moreover, some of those documents have a deprecated status. This is important to select the documents with 'Adopted' status
+
+## Important documents
+There is two important documents. The first one is the core bluetooth specification. This will gives you some important generic informations
+![spec bluetoothcore](/assets/images/2024-09-09_23-18_core.png)
+
+Among all other document, there is one that seems to be interresting for us: The Human Interface Device Profile.
+![spec bluetoothhid](/assets/images/2024-09-09_23-19_hid.png)
+
+
+# SPD
+Bluetooth specification describes SDP.
+> SDP database which consists of a list of service records that describe the characteristics of services associated with the server. Each service record contains information about a single service.
+
+> All of the information about a service that is maintained by an SDP Server is contained within a single service record. The service record shall only be a list of service attributes.
+
+![spec bluetoothhid](/assets/images/2024-09-09_23-23_24_sdp.png)
+
+> An attribute ID is a 16-bit unsigned integer
+
+> A service class definition specifies each of the attribute IDs for a service class and assigns a meaning to the attribute value associated with each attribute ID. Each attribute ID is defined to be unique only within each service class
+
+> A service record contains attributes that are specific to a service class as well as universal attributes that are common to all services
+
+
+# References
+- 1 https://github.com/torvalds/linux/blob/master/net/bluetooth/lib.c
+- 2 https://docs.kernel.org/hid/hidintro.html
+- 3 https://www.youtube.com/watch?v=1kfUYj2Yilg
+- 4 https://programel.ru/files/Tutorial%20about%20USB%20HID%20Report%20Descriptors%20_%20Eleccelerator.pdf
+- 5 https://stackoverflow.com/questions/65497619/making-linux-into-a-bluetooth-keyboard-hid
+
+
