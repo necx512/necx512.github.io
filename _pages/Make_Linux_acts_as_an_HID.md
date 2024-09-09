@@ -104,19 +104,68 @@ Bluetooth specification describes SDP.
 <td>Global</td>
 <td>Local</td>
 </th>
-<table>
-| Main | Global | Local |
-| ---- | ------ | ----- |
-| Input | Usage Page | Usage
-| Output | Logical Minimum | Usage Minimum 
-| Feature | Logical Maximum | Usage Maxium
-| Collection | Physical Minimum
-| End Of Collection | Physical Maximum
-| | Report Size | |
-| | Report ID | |
-| | Report Count | |
-| | Push | |
-| | Pop | |
+
+<tr>
+<td>Input</td>
+<td>Usage Page</td>
+<td>Usage</td>
+</tr>
+
+<tr>
+<td>Output</td>
+<td>Logical Minimum</td>
+<td>Usage Usage Minimum</td>
+</tr>
+
+<tr>
+<td>Feature</td>
+<td>Logical Maximum</td>
+<td>Usage Usage Maximum</td>
+</tr>
+
+<tr>
+<td>Collection</td>
+<td>Physical Minimum</td>
+<td></td>
+</tr>
+
+<tr>
+<td>End of Collection</td>
+<td>Physical Maximum</td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>Report Size</td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>Report ID</td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>Report Count</td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>Report Push</td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>Report Pop</td>
+<td></td>
+</tr>
+
+</table>
 
 
 # References
