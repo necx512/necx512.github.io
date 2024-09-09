@@ -101,8 +101,8 @@ Bluetooth specification describes SDP.
 | Main | Global | Local |
 | ---- | ------ | ----- |
 | Input | Usage Page | Usage
-| Output | Logical Minimum | 
-| Feature | Logical Maximum
+| Output | Logical Minimum | Usage Minimum 
+| Feature | Logical Maximum | Usage Maxium
 | Collection | Physical Minimum
 | End Of Collection | Physical Maximum
 | | Report Size | |
