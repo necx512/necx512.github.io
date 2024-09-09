@@ -97,6 +97,20 @@ Bluetooth specification describes SDP.
 
 > A service record contains attributes that are specific to a service class as well as universal attributes that are common to all services
 
+# USB
+| Main | Global | Local |
+| ---- | ------ | ----- |
+| Input | Usage Page | Usage
+| Output | Logical Minimum | 
+| Feature | Logical Maximum
+| Collection | Physical Minimum
+| End Of Collection | Physical Maximum
+| | Report Size | |
+| | Report ID | |
+| | Report Count | |
+| | Push | |
+| | Pop | |
+
 
 # References
 - 1 https://github.com/torvalds/linux/blob/master/net/bluetooth/lib.c
@@ -104,5 +118,5 @@ Bluetooth specification describes SDP.
 - 3 https://www.youtube.com/watch?v=1kfUYj2Yilg
 - 4 https://programel.ru/files/Tutorial%20about%20USB%20HID%20Report%20Descriptors%20_%20Eleccelerator.pdf
 - 5 https://stackoverflow.com/questions/65497619/making-linux-into-a-bluetooth-keyboard-hid
-
+- 6 https://docs.silabs.com/protocol-usb/1.2.0/protocol-usb-hid/
 
