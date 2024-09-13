@@ -97,6 +97,22 @@ Bluetooth specification describes SDP.
 
 > A service record contains attributes that are specific to a service class as well as universal attributes that are common to all services
 
+
+SPD attributes is splitted into two categories : Universal attributes and Specific attributes.
+
+## Universal attributes
+Universal attributes is defined in the bluetooth specification "Assigned Numbers", section 5.1.5 "Bluetooth Core Specification: Universal Attributes":
+
+![spec bluetoothhid](/assets/images/2024-09-13_22-51_univattributes.png)
+
+The same specification also describe the attribute ID Offsets for Strings
+
+![spec bluetoothhid](/assets/images/2024-09-13_22-51_attributesIDOffsetsforStrings.png)
+
+The same specification also describe the Device Identification Profile:
+
+![spec bluetoothhid](/assets/images/2024-09-13_23-09_did.png)
+
 # USB
 <table>
 <tr>
