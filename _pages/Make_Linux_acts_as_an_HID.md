@@ -148,9 +148,42 @@ The bluetooth core specification gives the details of each attributes
 
 ![spec bluetoothhid](/assets/images/2024-09-13_23-47_providername.png)
 
+
+## DID
+
 The same specification also describe the Device Identification Profile:
 
 ![spec bluetoothhid](/assets/images/2024-09-13_23-09_did.png)
+
+### SpecificationID (0x0200)
+The bluetooth device identification profile specification give the details of each attribute
+
+![spec bluetoothhid](/assets/images/2024-09-14_00-04_specificationID.png)
+
+### VendorID (0x0201)
+The bluetooth device identification profile specification give the details of each attribute
+
+![spec bluetoothhid](/assets/images/2024-09-14_00-06_vendorid.png)
+
+### ProductID (0x0202)
+The bluetooth device identification profile specification give the details of each attribute
+
+![spec bluetoothhid](/assets/images/2024-09-14_00-07_productID.png)
+
+### Version (0x0203)
+The bluetooth device identification profile specification give the details of each attribute
+
+![spec bluetoothhid](/assets/images/2024-09-14_00-18_version.png)
+
+### PrimaryRecord (0x0204)
+The bluetooth device identification profile specification give the details of each attribute
+
+![spec bluetoothhid](/assets/images/2024-09-14_00-20_Primaryrecord.png)
+
+### VendorIDSource (0x0205)
+The bluetooth device identification profile specification give the details of each attribute
+
+![spec bluetoothhid](/assets/images/2024-09-14_00-21_vendorIDSource.png)
 
 # USB
 <table>
