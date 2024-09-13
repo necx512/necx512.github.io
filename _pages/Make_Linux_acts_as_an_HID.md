@@ -185,6 +185,51 @@ The bluetooth device identification profile specification give the details of ea
 
 ![spec bluetoothhid](/assets/images/2024-09-14_00-21_vendorIDSource.png)
 
+### HIDDescriptorList (0x0206)
+The bluetooth HUMAN INTERFACE DEVICE PROFILE 1.1 specification give the details of this attribute
+
+![spec bluetoothhid](/assets/images/2024-09-14_01-17_hiddescriptorlist.png)
+
+### HIDLANGIDBaseList (0x0207)
+The bluetooth HUMAN INTERFACE DEVICE PROFILE 1.1 specification give the details of this attribute
+
+![spec bluetoothhid](/assets/images/2024-09-14_01-27_hidlangidbaselist.png)
+
+### HIDProfileVersion 0x020B 
+The bluetooth HUMAN INTERFACE DEVICE PROFILE 1.1 specification give the details of this attribute
+DEPRECATED
+
+![spec bluetoothhid](/assets/images/2024-09-14_01-31_hidprofileverion.png)
+
+### HIDSupervisionTimeout (0x020c) 
+The bluetooth HUMAN INTERFACE DEVICE PROFILE 1.1 specification give the details of this attribute
+
+![spec bluetoothhid](/assets/images/2024-09-14_01-34_hidsupervisiontimeout.png)
+
+### HIDNormallyConnectable (0x020d) 
+The bluetooth HUMAN INTERFACE DEVICE PROFILE 1.1 specification give the details of this attribute
+
+![spec bluetoothhid](/assets/images/2024-09-14_01-35_hidnormallyconnectable.png)
+
+### HIDBootDevice (0x020e) 
+The bluetooth HUMAN INTERFACE DEVICE PROFILE 1.1 specification give the details of this attribute
+
+![spec bluetoothhid](/assets/images/2024-09-14_01-40_HIDBootDevice.png)
+
+### HIDSSRHostMaxLatency (0x020f) 
+The bluetooth HUMAN INTERFACE DEVICE PROFILE 1.1 specification give the details of this attribute
+
+![spec bluetoothhid](/assets/images/2024-09-14_01-41_hidssrhostmaxlatency.png)
+
+### HIDSSRHostMinTimeout (0x0210)
+The bluetooth HUMAN INTERFACE DEVICE PROFILE 1.1 specification give the details of this attribute
+
+![spec bluetoothhid](/assets/images/2024-09-14_01-43_hidssrhostmintimeout.png)
+
+
+
+
+
 # USB
 <table>
 <tr>
