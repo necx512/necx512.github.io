@@ -128,9 +128,25 @@ The bluetooth core specification gives the details of each attributes
 The bluetooth core specification gives the details of each attributes
 ![spec bluetoothhid](/assets/images/2024-09-13_23-37_additionalprotocoldescriptorlists.png)
 
+## attribute ID Offsets
 The same specification also describe the attribute ID Offsets for Strings
 
 ![spec bluetoothhid](/assets/images/2024-09-13_22-51_attributesIDOffsetsforStrings.png)
+
+### ServiceName attribute
+The bluetooth core specification gives the details of each attributes
+
+![spec bluetoothhid](/assets/images/2024-09-13_23-42_servicename.png)
+
+### ServiceDescription attribute
+The bluetooth core specification gives the details of each attributes
+
+![spec bluetoothhid](/assets/images/2024-09-13_23-43_servicedescription.png)
+
+### ServiceDescription attribute
+The bluetooth core specification gives the details of each attributes
+
+![spec bluetoothhid](/assets/images/2024-09-13_23-47_providername.png)
 
 The same specification also describe the Device Identification Profile:
 
