@@ -167,6 +167,9 @@ Bluetooth specification describes SDP.
 
 </table>
 
+# Transfer
+The way a device send data to the host is described in section '3.1.2.9 DATA' of the bluetooth human interface device profile 1.1 specification:
+![spec bluetoothhid](/assets/images/2024-09-13_22-17_transfer.png)
 
 # References
 - 1 https://github.com/torvalds/linux/blob/master/net/bluetooth/lib.c
