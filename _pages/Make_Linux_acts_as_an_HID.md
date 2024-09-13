@@ -100,10 +100,33 @@ Bluetooth specification describes SDP.
 
 SPD attributes is splitted into two categories : Universal attributes and Specific attributes.
 
-## Universal attributes
+## attributes ID
 Universal attributes is defined in the bluetooth specification "Assigned Numbers", section 5.1.5 "Bluetooth Core Specification: Universal Attributes":
-
 ![spec bluetoothhid](/assets/images/2024-09-13_22-51_univattributes.png)
+
+### ServiceClassIDList (0x0001)
+The bluetooth core specification gives the details of each attributes:
+![spec bluetoothhid](/assets/images/2024-09-13_23-15_serviceclassidlist.png)
+
+### ProtocolDescriptorList (0x0004)
+The bluetooth core specification gives the details of each attributes:
+![spec bluetoothhid](/assets/images/2024-09-13_23-22_protocoldescriptolist.png)
+
+### BrowseGroupList (0x0005)
+The bluetooth core specification gives the details of each attributes:
+![spec bluetoothhid](/assets/images/2024-09-13_23-24_browsegrouplist.png)
+
+### LanguageBaseAttributeIDList (0x0006)
+The bluetooth core specification gives the details of each attributes
+![spec bluetoothhid](/assets/images/2024-09-13_23-29_languagebaseattributeidlist.png)
+
+### BluetoothProfileDescriptorList (0x0009)
+The bluetooth core specification gives the details of each attributes
+![spec bluetoothhid](/assets/images/2024-09-13_23-34_bluetoothProfileDescriptorlist.png)
+
+### AdditionalProtocolDescriptorLists (0x000d)
+The bluetooth core specification gives the details of each attributes
+![spec bluetoothhid](/assets/images/2024-09-13_23-37_additionalprotocoldescriptorlists.png)
 
 The same specification also describe the attribute ID Offsets for Strings
 
