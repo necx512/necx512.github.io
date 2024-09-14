@@ -249,66 +249,68 @@ The USB Device Class Definition for Human Interface Devices (HID) Specification 
 </tr>
 
 <tr>
-<td>Input (1000 00 nn) </td>
-<td>Usage Page (0000 01 nn)</td>
-<td>Usage (0000 10 nn)</td>
+<td>Input (1000 00 nn : 0x80 -> 0x83) </td>
+<td>Usage Page (0000 01 nn : 0x04 -> 0x06)</td>
+<td>Usage (0000 10 nn : 0x08 -> 0x0a)</td>
 </tr>
 
 <tr>
-<td>Output (1001 00 nn)</td>
-<td>Logical Minimum (0001 01 nn)</td>
-<td>Usage Minimum (0001 10 nn)</td>
+<td>Output (1001 00 nn : 0x90 -> 0x92)</td>
+<td>Logical Minimum (0001 01 nn : 0x14 -> 0x16)</td>
+<td>Usage Minimum (0001 10 nn : 0x18 -> 0x1a)</td>
 </tr>
 
 <tr>
-<td>Feature (1011 00 nn)</td>
-<td>Logical Maximum (0010 01 nn)</td>
-<td>Usage Maximum (0010 10 nn)</td>
+<td>Feature (1011 00 nn : 0xb0 -> 0xb2)</td>
+<td>Logical Maximum (0010 01 nn : 0xa4 -> 0xa6)</td>
+<td>Usage Maximum (0010 10 nn : 0x28 -> 0x2a)</td>
 </tr>
 
 <tr>
-<td>Collection (1010 00 nn)</td>
-<td>Physical Minimum (0011 01 nn)</td>
+<td>Collection (1010 00 nn : 0xa0 -> 0xa2)</td>
+<td>Physical Minimum (0011 01 nn : 0x34 -> 0x36)</td>
 <td></td>
 </tr>
 
 <tr>
-<td>End of Collection( 1100 00 nn)</td>
-<td>Physical Maximum (0100 01 nn)</td>
-<td></td>
-</tr>
-
-<tr>
-<td></td>
-<td>Report Size (0111 01 nn)</td>
+<td>End of Collection( 1100 00 nn : 0xc0 -> 0xc2)</td>
+<td>Physical Maximum (0100 01 nn : 0x44 -> 0x46)</td>
 <td></td>
 </tr>
 
 <tr>
 <td></td>
-<td>Report ID (1000 01 nn)</td>
+<td>Report Size (0111 01 nn : 0x74 -> 0x76)</td>
 <td></td>
 </tr>
 
 <tr>
 <td></td>
-<td>Report Count (1001 01 nn)</td>
+<td>Report ID (1000 01 nn : 0x84 -> 0x86)</td>
 <td></td>
 </tr>
 
 <tr>
 <td></td>
-<td>Report Push (1010 01 nn)</td>
+<td>Report Count (1001 01 nn : 0x94 -> 0x96)</td>
 <td></td>
 </tr>
 
 <tr>
 <td></td>
-<td>Report Pop (1011 01 nn)</td>
+<td>Report Push (1010 01 nn : 0xa4 -> 0xa6)</td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>Report Pop (1011 01 nn : 0xb4 -> 0xb6)</td>
 <td></td>
 </tr>
 
 </table>
+
+nn represents the size of the record without considering the first prefix byte.
 
 # Transfer
 The way a device send data to the host is described in section '3.1.2.9 DATA' of the bluetooth human interface device profile 1.1 specification:
