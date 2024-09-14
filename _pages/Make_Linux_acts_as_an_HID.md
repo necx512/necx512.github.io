@@ -243,44 +243,44 @@ The USB Device Class Definition for Human Interface Devices (HID) Specification 
 
 <table>
 <tr>
-<th>Main</th>
-<th>Global</th>
-<th>Local</th>
+<th>Main (xxxx 00 nn)</th>
+<th>Global(xxxx 01 nn)</th>
+<th>Local (xxxx 10 nn)</th>
 </tr>
 
 <tr>
-<td>Input</td>
-<td>Usage Page</td>
-<td>Usage</td>
+<td>Input (1000 00 nn) </td>
+<td>Usage Page (0000 01 nn)</td>
+<td>Usage (0000 10 nn)</td>
 </tr>
 
 <tr>
-<td>Output</td>
-<td>Logical Minimum</td>
-<td>Usage Usage Minimum</td>
+<td>Output (1001 00 nn)</td>
+<td>Logical Minimum (0001 01 nn)</td>
+<td>Usage Minimum (0001 10 nn)</td>
 </tr>
 
 <tr>
-<td>Feature</td>
-<td>Logical Maximum</td>
-<td>Usage Usage Maximum</td>
+<td>Feature (1011 00 nn)</td>
+<td>Logical Maximum (0010 01 nn)</td>
+<td>Usage Maximum (0010 10 nn)</td>
 </tr>
 
 <tr>
-<td>Collection</td>
-<td>Physical Minimum</td>
+<td>Collection (1010 00 nn)</td>
+<td>Physical Minimum (0011 01 nn)</td>
 <td></td>
 </tr>
 
 <tr>
-<td>End of Collection</td>
-<td>Physical Maximum</td>
+<td>End of Collection( 1100 00 nn)</td>
+<td>Physical Maximum (0100 01 nn)</td>
 <td></td>
 </tr>
 
 <tr>
 <td></td>
-<td>Report Size</td>
+<td>Report Size (0111 01 nn)</td>
 <td></td>
 </tr>
 
