@@ -262,7 +262,7 @@ The USB Device Class Definition for Human Interface Devices (HID) Specification 
 
 <tr>
 <td>Feature <br />(1011 00 nn : 0xb0 -> 0xb2)</td>
-<td>Logical Maximum <br />(0010 01 nn : 0xa4 -> 0xa6)</td>
+<td>Logical Maximum <br />(0010 01 nn : 0x24 -> 0x26)</td>
 <td>Usage Maximum <br />(0010 10 nn : 0x28 -> 0x2a)</td>
 </tr>
 
