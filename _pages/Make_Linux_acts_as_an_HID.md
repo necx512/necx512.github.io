@@ -231,6 +231,16 @@ The bluetooth HUMAN INTERFACE DEVICE PROFILE 1.1 specification give the details 
 
 
 # USB
+
+The USB Device Class Definition for Human Interface Devices (HID) Specification describe tag, ite
+
+![spec bluetoothhid](/assets/images/2024-09-14_16-33_btypebsize.png)
+![spec bluetoothhid](/assets/images/2024-09-14_16-33_btypebsizelong.png)
+![spec bluetoothhid](/assets/images/2024-09-14_16-35_mainitem.png)
+![spec bluetoothhid](/assets/images/2024-09-14_16-36_globalitem.png)
+![spec bluetoothhid](/assets/images/2024-09-14_16-37_localitem.png)
+
+
 <table>
 <tr>
 <th>Main</th>
