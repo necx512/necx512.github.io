@@ -286,25 +286,25 @@ The USB Device Class Definition for Human Interface Devices (HID) Specification 
 
 <tr>
 <td></td>
-<td>Report ID</td>
+<td>Report ID (1000 01 nn)</td>
 <td></td>
 </tr>
 
 <tr>
 <td></td>
-<td>Report Count</td>
+<td>Report Count (1001 01 nn)</td>
 <td></td>
 </tr>
 
 <tr>
 <td></td>
-<td>Report Push</td>
+<td>Report Push (1010 01 nn)</td>
 <td></td>
 </tr>
 
 <tr>
 <td></td>
-<td>Report Pop</td>
+<td>Report Pop (1011 01 nn)</td>
 <td></td>
 </tr>
 
