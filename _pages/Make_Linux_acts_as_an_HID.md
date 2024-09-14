@@ -309,8 +309,38 @@ The USB Device Class Definition for Human Interface Devices (HID) Specification 
 </tr>
 
 </table>
-
 nn represents the size of the record without considering the first prefix byte.
+
+
+# Toward mouse
+When you search to implement an HID device, you first has to ask what category it is. In USB specification, the category is the usage page.
+USB HID Usage Tables specification gives the possible usage page. Some exemples are:
+- Generic Desktop
+- VR Controls
+- Telephony Device
+- Eye and Head Trackers
+- ...
+
+Mouse is in 'Generic Desktop' category:
+![spec bluetoothhid](/assets/images/2024-09-14_19-28usagepagedesktop_mouse.png)
+
+Usage Page = Generic Desktop Page which is 0x01
+Usage = Mouse which is 0x02
+
+The table show that Usage Type is CA, which means Collection Application according to the USB HID Usage Tables specification:
+
+![spec bluetoothhid](/assets/images/2024-09-14_19-34_CA.png)
+
+The USB Device Class Definition for Human Interface Device (HID) specification gives the value of the application collection:
+
+![spec bluetoothhid](/assets/images/2024-09-14_19-41_CAVALUE.png)
+
+Usage Page = Generic Desktop Page which is 0x01
+Usage = Mouse which is 0x02
+Collection = Application which is 0x01
+
+
+
 
 # Transfer
 The way a device send data to the host is described in section '3.1.2.9 DATA' of the bluetooth human interface device profile 1.1 specification:
