@@ -4,6 +4,11 @@ title: Make Linux acts as an HID
 description: Débuter sur i3.
 ---
 
+<h1><span style="color:blue">This page is under construction</span></h1>
+<h1><span style="color:blue">This page is under construction</span></h1>
+<h1><span style="color:blue">This page is under construction</span></h1>
+<h1><span style="color:blue">This page is under construction</span></h1>
+<h1><span style="color:blue">This page is under construction</span></h1>
 
 Some days ago, I opened my laptop and due to a kind of Murphy's law, the keyboard did not work.
 
@@ -327,9 +332,10 @@ Mouse is in 'Generic Desktop' category:
 Usage Page = Generic Desktop Page which is 0x01
 Usage = Mouse which is 0x02
 
-The table show that Usage Type is CA, which means Collection Application according to the USB HID Usage Tables specification:
+The table show that Usage Type is CA, which means Collection Application according (so we will need to describe the collection)to the USB HID Usage Tables specification:
 
 ![spec bluetoothhid](/assets/images/2024-09-14_19-34_CA.png)
+
 
 The USB Device Class Definition for Human Interface Device (HID) specification gives the value of the application collection:
 
@@ -338,6 +344,56 @@ The USB Device Class Definition for Human Interface Device (HID) specification g
 Usage Page = Generic Desktop Page which is 0x01
 Usage = Mouse which is 0x02
 Collection = Application which is 0x01
+
+As described in the previous image, the application collection is "a group of Main items".
+As far as I understand, it means that a collection have to contains one or more Main items. It does not mean it cannot contain Global or Local item.
+As described in the Device Classe Definition for Humain Interface Devices (HID):
+
+> Collection item tag: A meaningful grouping of Input, Output, and Feature items—for example, mouse, keyboard, joystick, and pointer.
+
+> A group of Main items that might be familiar to applications
+
+
+exemple p35/97 ca manque de rigueur sur les tabs
+Usage Page (Generic Desktop), ;Use the Generic Desktop Usage Page
+Usage (Mouse),
+Collection (Application), ;Start Mouse collection
+    Usage (Pointer),
+    Collection (Physical), ;Start Pointer collection
+        Usage Page (Buttons)
+        Usage Minimum (1),
+        Usage Maximum (3),
+        Logical Minimum (0),
+        Logical Maximum (1), ;Fields return values from 0 to 1
+        Report Count (3),
+        Report Size (1), ;Create three 1 bit fields (button 1, 2, & 3)
+        Input (Data, Variable, Absolute), ;Add fields to the input report.
+        Report Count (1),
+        Report Size (5), ;Create 5 bit constant field
+        Input (Constant), ;Add field to the input report
+
+        Usage Page (Generic Desktop),
+        Usage (X),
+        Usage (Y),
+        Logical Minimum (-127),
+        Logical Maximum (127), ;Fields return values from -127 to 127
+        Report Size (8),
+        Report Count (2), ;Create two 8 bit fields (X & Y position)
+        Input (Data, Variable, Relative), ;Add fields to the input report
+    End Collection, ;Close Pointer collection
+End Collection ;Close Mouse collection
+
+
+# Les usages pages
+Un usage page Generic qui a un objet Mouse de type CA
+Un Usage Page Button. On va pas ce service d'un Usage ici mais d'un range d'usage
+
+
+On va decomposer une souris. Une souris c'est des boutons et des axes
+
+
+
+it does not mean that a main item have to contain collection. It means that a collection 
 
 
 
