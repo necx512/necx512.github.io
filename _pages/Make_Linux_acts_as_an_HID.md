@@ -353,48 +353,9 @@ As described in the Device Classe Definition for Humain Interface Devices (HID):
 
 > A group of Main items that might be familiar to applications
 
+The good point is that The USB Device Class Definition for Human Interface Device (HID) specification gives an exemple:
 
-exemple p35/97 ca manque de rigueur sur les tabs
-Usage Page (Generic Desktop), ;Use the Generic Desktop Usage Page
-Usage (Mouse),
-Collection (Application), ;Start Mouse collection
-    Usage (Pointer),
-    Collection (Physical), ;Start Pointer collection
-        Usage Page (Buttons)
-        Usage Minimum (1),
-        Usage Maximum (3),
-        Logical Minimum (0),
-        Logical Maximum (1), ;Fields return values from 0 to 1
-        Report Count (3),
-        Report Size (1), ;Create three 1 bit fields (button 1, 2, & 3)
-        Input (Data, Variable, Absolute), ;Add fields to the input report.
-        Report Count (1),
-        Report Size (5), ;Create 5 bit constant field
-        Input (Constant), ;Add field to the input report
-
-        Usage Page (Generic Desktop),
-        Usage (X),
-        Usage (Y),
-        Logical Minimum (-127),
-        Logical Maximum (127), ;Fields return values from -127 to 127
-        Report Size (8),
-        Report Count (2), ;Create two 8 bit fields (X & Y position)
-        Input (Data, Variable, Relative), ;Add fields to the input report
-    End Collection, ;Close Pointer collection
-End Collection ;Close Mouse collection
-
-
-# Les usages pages
-Un usage page Generic qui a un objet Mouse de type CA
-Un Usage Page Button. On va pas ce service d'un Usage ici mais d'un range d'usage
-
-
-On va decomposer une souris. Une souris c'est des boutons et des axes
-
-
-
-it does not mean that a main item have to contain collection. It means that a collection 
-
+![spec bluetoothhid](/assets/images/2024-09-22_12-10_exemple.png)
 
 
 
@@ -403,6 +364,18 @@ The way a device send data to the host is described in section '3.1.2.9 DATA' of
 ![spec bluetoothhid](/assets/images/2024-09-13_22-17_transfer.png)
 
 # References
+- Bluetooth Core Specification 
+- Bluetooth HUMAN INTERFACE DEVICE PROFILE 1.1
+- http://rfc.nop.hu/bluetooth/HID_SPEC_V10.pdf
+- Bluetooth Assigned Numbers https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Assigned_Numbers/out/en/Assigned_Numbers.pdf?v=1726177615930
+- Bluetooth Device identification profile specification
+- Bluetooth HID Lite https://www.bluetooth.com/wp-content/uploads/2023/08/HID-Lite-WP-V10.pdf
+- Bluetooth HUMAN INTERFACE DEVICE (HID) PROFILE  http://rfc.nop.hu/bluetooth/HID_SPEC_V10.pdf
+
+- USB Device Class Definition for Human Interface Devices (HID) https://www.usb.org/sites/default/files/hid1_11.pdf
+- USB HID Usage Tables For Universal Serial Bus (USB) https://www.usb.org/sites/default/files/hut1_5.pdf
+
+
 - 1 https://github.com/torvalds/linux/blob/master/net/bluetooth/lib.c
 - 2 https://docs.kernel.org/hid/hidintro.html
 - 3 https://www.youtube.com/watch?v=1kfUYj2Yilg
