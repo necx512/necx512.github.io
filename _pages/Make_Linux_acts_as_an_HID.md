@@ -375,6 +375,19 @@ The way a device send data to the host is described in section '3.1.2.9 DATA' of
 - USB Device Class Definition for Human Interface Devices (HID) https://www.usb.org/sites/default/files/hid1_11.pdf
 - USB HID Usage Tables For Universal Serial Bus (USB) https://www.usb.org/sites/default/files/hut1_5.pdf
 
+- https://gist.github.com/scientificRat/be2bbac0769bfa04820bc73edc009bdf
+- https://github.com/torvalds/linux/blob/master/net/bluetooth/lib.c
+- https://github.com/gh4ck3r/hid2bt/tree/master
+- https://github.com/bluez/bluez/blob/master/doc/org.bluez.ProfileManager.rst
+
+- https://www.youtube.com/watch?v=jMf55KVDPaE&ab_channel=28c3
+
+- https://stackoverflow.com/questions/34709583/bluetoothctl-set-passkey
+- https://stackoverflow.com/questions/21606991/custom-hid-device-hid-report-descriptor
+- https://ravikiranb.com/tutorials/generic-comm-usb-hid/
+- https://programel.ru/files/Tutorial%20about%20USB%20HID%20Report%20Descriptors%20_%20Eleccelerator.pdf
+- https://docs.silabs.com/protocol-usb/1.2.0/protocol-usb-hid/
+
 
 - 1 https://github.com/torvalds/linux/blob/master/net/bluetooth/lib.c
 - 2 https://docs.kernel.org/hid/hidintro.html
